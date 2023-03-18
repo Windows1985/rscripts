@@ -710,10 +710,10 @@ function updateBoothText()
 					end
 				end
 				require(game:GetService("ReplicatedStorage").Remotes).Event("SetBoothText"):FireServer("your text here", "booth")
-				task.wait(3)
+				task.wait(1)
 			end
 			require(game:GetService('ReplicatedStorage').Remotes).Event("SetBoothText"):FireServer(boothText, "booth")
-			task.wait(3)
+			task.wait(1)
 		else
 		end
 	end
