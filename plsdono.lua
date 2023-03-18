@@ -719,7 +719,7 @@ function updateBoothText()
 	end
 	if getgenv().settings.textUpdateToggle and getgenv().settings.customBoothText and getgenv().settings.rainbowText then
 		while task.wait() and getgenv().settings.rainbowText do
-			task.wait(0.3)
+			task.wait(0.1)
 			for i, v in next, BetterRainbowColorHex do
 				if not getgenv().settings.rainbowText then
 					break
@@ -730,7 +730,7 @@ function updateBoothText()
 					boothText = tostring('<font color="' .. v .. '">' .. text .. '</font>')
 				end
 				require(game:GetService('ReplicatedStorage').Remotes).Event("SetBoothText"):FireServer(boothText, "booth")
-				task.wait(3)
+				task.wait(0.1)
 			end
 		end
 	end
